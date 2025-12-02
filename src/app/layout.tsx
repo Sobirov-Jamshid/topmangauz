@@ -11,6 +11,7 @@ import { getBaseUrl } from "@/lib/seo/url";
 import Script from "next/script";
 import GoogleAnalyticsReporter from "@/components/analytics/GoogleAnalyticsReporter";
 import SnowfallOverlay from "@/components/common/SnowfallOverlay";
+import { Suspense } from "react"; // 🔹 Qo‘shamiz
 
 const GA_MEASUREMENT_ID =
   process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-6H7SKF5RQY";
@@ -130,7 +131,9 @@ export default function RootLayout({
 
 
         {/* 🔹 Router o‘zgarganda page_view jo'natadigan komponent */}
-        <GoogleAnalyticsReporter />
+        <Suspense fallback={null}>
+          <GoogleAnalyticsReporter />
+        </Suspense>
 
         <QueryProvider>
           <ToastProvider>{children}</ToastProvider>
