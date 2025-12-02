@@ -17,13 +17,6 @@ const GA_MEASUREMENT_ID =
 
 export const metadata: Metadata = {
   ...baseMetadata,
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-    userScalable: true,
-  },
-
   verification: {
     google: "7z7bo7XpPzzE0ZoS8fUr8CXE4A8K4q2fGRxK3tTO3I4",
     yandex: "your-yandex-verification-code",
