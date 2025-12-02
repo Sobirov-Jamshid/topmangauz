@@ -1,0 +1,2 @@
+NEXT_PUBLIC_API_URL=http://5.189.179.67:8000/api
+Comment 
